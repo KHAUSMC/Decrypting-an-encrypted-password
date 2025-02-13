@@ -144,7 +144,26 @@ To do this, I will **list the contents of my current working directory** using t
 ### 🔎 **Why Use `ls` Again?**
 - ✅ **Checks if `Q1.recovered` exists** after running the OpenSSL decryption command.  
 - ✅ **Verifies that the decryption process was successful** by ensuring a new output file was generated.  
-- ✅ **Confirms the current directory's contents** before proceeding to read the recovered file.  
+- ✅ **Confirms the current directory's contents** before proceeding to read the recovered file.
+
+## 📂 Step 10: Reading the Decrypted File  
+
+Now that I have successfully **decrypted `Q1.encrypted`**, the recovered data is stored in the file `Q1.recovered`.  
+To **view the contents** of the decrypted file, I use the following command:
+
+***cat Q1.recovered***
+
+![Viewing Decrypted File](https://i.imgur.com/VBxOvRV.png)
+
+### 🔎 **Why Use `cat`?**
+- ✅ **Displays the entire contents** of `Q1.recovered` directly in the terminal.  
+- ✅ **Confirms that the decryption process was successful** by checking the recovered message.  
+- ✅ **Ensures I can read and use the extracted data.**  
+
+
+
+
+  
 
 
 
