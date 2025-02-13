@@ -90,6 +90,67 @@ To shift all letters **backward by 3 places**, I used the following command:
 
 ![Decryption Command in Action](https://i.imgur.com/orREwsH.png)
 
+🔎 Breaking Down the Command:
+- **`cat .leftShift3`** → Displays the contents of the file.
+- **`|` (Pipe Operator)** → Passes the output from `cat` to `tr` for processing.
+- **`tr "d-za-cD-ZA-C" "a-zA-Z"`** → Translates the shifted text back to its original form by replacing:
+  - **`"d-za-c"`** → (Shifted lowercase letters) with **`"a-z"`** (Original lowercase letters).
+  - **`"D-ZA-C"`** → (Shifted uppercase letters) with **`"A-Z"`** (Original uppercase letters).
+
+## 🔄 Step 7: Returning to the Home Directory  
+
+Before moving on to the next task, I need to **return to my home directory**.  
+To do this, I use the following command:
+
+cd ~
+
+![Decryption Process](https://i.imgur.com/TAMJ2jn.png)
+
+# 🔓 Step 8: Decrypting the Encrypted File  
+
+Now that I have successfully **solved the Caesar cipher**, I have obtained the **decryption command** from the `.leftShift3` file.  
+In this step, I will use **OpenSSL** to decrypt the `Q1.encrypted` file and recover my lost data.
+
+---
+
+## 🛠️ **Command Used for Decryption**
+To decrypt the encrypted file and recover its contents, I ran the following command:
+
+***openssl aes-256-cbc -pbkdf2 -a -d -in Q1.encrypted -out Q1.recovered -k ettubrute***
+
+## 🔎 Breaking Down the Command  
+
+| Command Component   | Explanation  |
+|---------------------|-------------|
+| `openssl`          | Calls the **OpenSSL** encryption/decryption tool. |
+| `aes-256-cbc`      | Specifies the **AES-256 CBC encryption algorithm**. |
+| `-pbkdf2`          | Uses **Password-Based Key Derivation Function 2 (PBKDF2)** for stronger security. |
+| `-a`               | Tells OpenSSL that the input file is **Base64 encoded**. |
+| `-d`               | Specifies **decryption mode** (instead of encryption). |
+| `-in Q1.encrypted` | Defines the **input file** (`Q1.encrypted`), which is the file to decrypt. |
+| `-out Q1.recovered`| Defines the **output file** (`Q1.recovered`), which will contain the decrypted data. |
+| `-k ettubrute`     | Uses `"ettubrute"` as the **decryption key**. |
+
+## 📂 Step 9: Verifying the Decrypted File  
+
+Now that I have successfully decrypted the `Q1.encrypted` file, I need to **confirm that the new decrypted file (`Q1.recovered`) has been created**.  
+
+To do this, I will **list the contents of my current working directory** using the following command:
+
+***ls***
+
+![Directory Listing After Decryption](https://i.imgur.com/cvrkukK.png)
+
+### 🔎 **Why Use `ls` Again?**
+- ✅ **Checks if `Q1.recovered` exists** after running the OpenSSL decryption command.  
+- ✅ **Verifies that the decryption process was successful** by ensuring a new output file was generated.  
+- ✅ **Confirms the current directory's contents** before proceeding to read the recovered file.  
+
+
+
+
+
+
 
 
 
