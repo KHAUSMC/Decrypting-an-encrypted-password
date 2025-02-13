@@ -160,6 +160,14 @@ To **view the contents** of the decrypted file, I use the following command:
 - ✅ **Confirms that the decryption process was successful** by checking the recovered message.  
 - ✅ **Ensures I can read and use the extracted data.**  
 
+---
+## 🚀 **Lessons Learned**
+- **File Navigation & Hidden Files:** Used `ls`, `cd`, and `ls -a` to explore directories.  
+- **Text Processing:** Used `cat` and `tr` to decode an encrypted message.  
+- **Cryptographic Commands:** Learned how to use `openssl` for **AES-256 decryption**.  
+- **Verification Steps:** Ensured the process worked using `ls` and `cat`.  
+
+This challenge **demonstrated my ability to work with Linux commands and cryptographic techniques** to solve real-world encryption problems. 🚀  
 
 
 
