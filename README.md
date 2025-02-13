@@ -74,8 +74,27 @@ Now that I have found the hidden file `.leftShift3`, I need to check its content
 ![Encrypted File Output](https://i.imgur.com/Od7i3LQ.png)
 
 ### 📂 **Expected Output (Scrambled Text):**
-Lq rughu wr uhfryhu brxu ilohv brx zloo qhhg wr hqwhu wkh iroorzlqj frppdqg:
-...
+***Lq rughu wr uhfryhu brxu ilohv brx zloo qhhg wr hqwhu wkh iroorzlqj frppdqg:
+...***
+
+At first glance, the text appears scrambled. This is because it has been encrypted using a Caesar cipher.
+
+## 🔓 Step 6: Decrypting the `.leftShift3` File  
+
+Now that I have identified that the `.leftShift3` file is encrypted using a **Caesar cipher with a shift of 3**, I can use the `tr` (translate) command to **decrypt** it.
+
+### 🛠️ **Decryption Command**  
+To shift all letters **backward by 3 places**, I used the following command:
+
+***cat .leftShift3 | tr "d-za-cD-ZA-C" "a-zA-Z"***
+
+![Decryption Command in Action](https://i.imgur.com/orREwsH.png)
+
+
+
+
+
+
 
 
 
